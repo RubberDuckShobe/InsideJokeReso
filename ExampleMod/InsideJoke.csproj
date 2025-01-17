@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<RootNamespace>ExampleMod</RootNamespace>
-		<AssemblyName>ExampleMod</AssemblyName>
+		<RootNamespace>InsideJoke</RootNamespace>
+		<AssemblyName>InsideJoke</AssemblyName>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<TargetFramework>net472</TargetFramework>
 		<FileAlignment>512</FileAlignment>
@@ -21,6 +21,17 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="System.Memory" Version="4.6.0" />
+	  <PackageReference Include="System.Reactive" Version="6.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="Elements.Assets">
+		  <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Resonite\Resonite_Data\Managed\Elements.Assets.dll</HintPath>
+		</Reference>
+		<Reference Include="Elements.Core">
+		  <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Resonite\Resonite_Data\Managed\Elements.Core.dll</HintPath>
+		</Reference>
 		<Reference Include="ResoniteModLoader">
 		    <HintPath>$(ResonitePath)Libraries\ResoniteModLoader.dll</HintPath>
 		    <Private>False</Private>
@@ -33,6 +44,9 @@
 		<Reference Include="FrooxEngine">
 		    <HintPath>$(ResonitePath)Resonite_Data\Managed\FrooxEngine.dll</HintPath>
 		    <Private>False</Private>
+		</Reference>
+		<Reference Include="Websocket.Client">
+		  <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Resonite\Resonite_Data\Managed\Websocket.Client.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 
